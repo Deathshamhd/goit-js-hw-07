@@ -1,5 +1,6 @@
 export const galleryItems = [
   {
+    //1
     preview:
       'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg',
     original:
@@ -7,6 +8,7 @@ export const galleryItems = [
     description: 'Hokkaido Flower',
   },
   {
+    //2
     preview:
       'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg',
     original:
@@ -14,6 +16,7 @@ export const galleryItems = [
     description: 'Container Haulage Freight',
   },
   {
+    //3
     preview:
       'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785__340.jpg',
     original:
@@ -21,6 +24,7 @@ export const galleryItems = [
     description: 'Aerial Beach View',
   },
   {
+    //4
     preview:
       'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619__340.jpg',
     original:
@@ -28,6 +32,7 @@ export const galleryItems = [
     description: 'Flower Blooms',
   },
   {
+    //5
     preview:
       'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334__340.jpg',
     original:
@@ -35,6 +40,7 @@ export const galleryItems = [
     description: 'Alpine Mountains',
   },
   {
+    //6
     preview:
       'https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571__340.jpg',
     original:
@@ -42,6 +48,7 @@ export const galleryItems = [
     description: 'Mountain Lake Sailing',
   },
   {
+    //7
     preview:
       'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272__340.jpg',
     original:
@@ -49,6 +56,7 @@ export const galleryItems = [
     description: 'Alpine Spring Meadows',
   },
   {
+    //8
     preview:
       'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255__340.jpg',
     original:
@@ -56,6 +64,7 @@ export const galleryItems = [
     description: 'Nature Landscape',
   },
   {
+    //9
     preview:
       'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg',
     original:
