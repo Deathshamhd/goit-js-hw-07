@@ -1,16 +1,17 @@
-import { galleryItems } from './gallery-items.js';
-// Change code below this line
-import { galleryItems } from './gallery-items.js';
-// Change code below this line
+// Importing the gallery items from the external file
+import { galleryItems } from "./gallery-items.js";
 
 const galleryRef = document.querySelector(".gallery");
 const galleryMarkup = createImgMarkup(galleryItems);
 
-
 galleryRef.insertAdjacentHTML("beforeend", galleryMarkup);
 
-// Add a click event listener to the gallery container to handle image clicks
-galleryRef.addEventListener("click", onImgContainerClick);
+// Create a SimpleLightbox instance and pass the selector for the gallery items
+const lightbox = new SimpleLightbox(".gallery__item a", {
+  // Specify the caption selector and captions source
+  captionsSelector: "img",
+  captionsData: "alt",
+});
 
 // Function to create the HTML markup for each image item
 function createImgMarkup(imgs) {
@@ -21,17 +22,14 @@ function createImgMarkup(imgs) {
           <a class="gallery__link" href="${item.original}">
             <img
                 class="gallery__image"
-                src='${item.preview}'
-                data-source='${item.original}'
-                alt='${item.description}'
+                src="${item.preview}"
+                alt="${item.description}"
             />
           </a>
        </div>`
     )
     .join("");
 }
-
-// Create a basicLightbox instance with an empty image element and event handlers
 let img = basicLightbox.create(
   `<img width="800" height="600">`,
   {
@@ -48,13 +46,6 @@ let img = basicLightbox.create(
   }
 );
 
-// Function to close the lightbox when the Escape key is pressed
-function onModalClose(evt) {
-  if (evt.code === "Escape") {
-    img.close();
-  }
-}
-
 // Function to handle clicks on the image container
 function onImgContainerClick(event) {
   event.preventDefault();
@@ -65,17 +56,9 @@ function onImgContainerClick(event) {
     return;
   }
 
-  // Get the URL of the larger image from the data-source attribute
-  let imgBigUrl = event.target.dataset.source;
-
-  // Set the source of the image element in the lightbox instance to the larger image URL
-  img.element().querySelector("img").setAttribute("src", imgBigUrl);
-
-  // Show the lightbox with the larger image
-  img.show();
+  // Open the lightbox for the clicked image
+  lightbox.open();
 }
 
-console.log(galleryItems);
-
-
-console.log(galleryItems);
+// Add a click event listener to the gallery container to handle image clicks
+galleryRef.addEventListener("click", onImgContainerClick);
