@@ -30,21 +30,6 @@ function createImgMarkup(imgs) {
     )
     .join("");
 }
-let img = basicLightbox.create(
-  `<img width="800" height="600">`,
-  {
-    // Event handler when the lightbox is shown
-    onShow: (instance) => {
-      window.addEventListener("keydown", onModalClose);
-    },
-  },
-  {
-    // Event handler when the lightbox is closed
-    onClose: (instance) => {
-      window.removeEventListener("keydown", onModalClose);
-    },
-  }
-);
 
 // Function to handle clicks on the image container
 function onImgContainerClick(event) {
